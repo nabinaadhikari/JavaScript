@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <script type="text/javascript" src="variables.js"></script>
+        <script type="text/javascript" src="name_function.js"></script> -->
+        <!-- <script type="text/javascript" src="constructors.js"></script>
+        <script type="text/javascript" src="bind_call.js"></script> -->
+        <!-- <script type="text/javascript" src="object.js"></script>
+        <script type="text/javascript" src="BOM_objects.js"></script> -->  
+        <!-- <script type="text/javascript" src="navigator_location_obect.js"></script> -->
+        <script type="text/javascript" src="cookies.js"></script>
+
+
+    </head>
+    <body>
+        <p id="demo"></p>
+        
+        <p>WELCOME TO NABINA</p>
+        <button type="button" onclick="msg()" value="click">CLICK</button>
+        <p id="output">Scree Information</p>
+        <!--for document object model: finding elements by ID-->
+ 
+        <script>
+            document.getElementById("output").innerHTML= "screen height" + window.screen.height + " "
+            + "screen width: " + window.screen.width + " " + "screen color is: " + window.screen.colorDepth; 
+        </script>
+
+ <!--for document object model: finding elements by ByName-->
+    <p name="tex">Hey, I am Nabina.</p>
+     <p id ="inpu">I stayed in Nepal.</p>
+    <script>
+    const element = document.getElementsByName('tex');
+    document.getElementById("inpu").innerHTML= + element[0].innerHTML;
+     </script>
+
+       <!--for timesetout and cleartimeout button-->
+    <button onclick="myStopFunction()">stop Message</button>
+    <button onclick="clearInterval(myinterval)">Stop date</button>
+
+
+        <!--for document object model: finding elements by ClassName -->
+       <p class = "fruit"> Apple </p>
+   <p> The name of the fruit is: <span id = "demo1"></span></p>
+   <script>
+      const divEle = document.getElementsByClassName('fruit');
+      console.log("divele",divEle[0].innerHTML); // to check
+      document.getElementById("demo1").innerHTML = divEle[0].innerHTML;
+        </script>
+
+
+</body>
+</html>

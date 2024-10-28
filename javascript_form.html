@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit= "submitForm(event)" id = "nameform"> 
+       
+      <p><label>First Name: </label><input type = "text" name = "firstname"></p>
+      <p><label>Last Name: </label><input type = "text" name = "lastname"></p>
+      <p><input type = "submit"></p>
+    </form>
+    <div id = "output"> </div>
+    <script>
+      function submitForm(e) {  //The onsubmit event occurs when a form is submitted.
+        e.preventDefault(); //preventDefault() method to prevent the execution of the function without submitting the form.
+        const output = document.getElementById('output');
+        const firstname = document.forms['nameform']['firstname'].value;
+        const lastname = document.forms['nameform']['lastname'].value; 
+        output.innerHTML = "First Name: " + firstname + ", Last Name: " + lastname;
+        //or
+        alert("the form was submitted!!")
+      }
+    </script>
