@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="dataValidation(event)" id="emailform">
+  <label>Email:</label>
+  <input type="text" name="email">
+  <p><input type = "submit"></p>
+    </form>
+    <div id="input"></div>
+    <script>
+    function dataValidation(e){
+        e.preventDefault();
+        const email= document.forms['emailform']['email'].value;
+           //Validate email using regex
+        const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/   
+  if (emailRegex.test(email)){
+    document.getElementById("input").innerHTML="the email is valid";
+  }else{
+    document.getElementById("input").innerHTML="the email is not valid";
+  }
+    }
+</script>
+</body>
+</html>

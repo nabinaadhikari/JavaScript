@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+         div{ 
+        background-color: red;
+        height: 100px;
+        color:blanchedalmond;
+    }
+    p{
+        background-color: whitesmoke;
+        font-size: 20px;
+    }
+    </style>
+   
+   <body>
+<div id="demo">changing HTML Changing the style of the HTML element. </div>
+<p id ="input">Changing Style of the Element When Event Triggers</p>
+<button onclick="changeColor()">Change color</button>
+<script>
+   function changeColor(){
+    let demo= document.getElementById('demo');
+    demo.style.backgroundColor="blue";  // changing bg color.
+    demo.style.color="white";// changing color 
+   
+    };
+</script>
+<script>
+     let input= document.getElementById('input');
+    input.addEventListener('click', () => { //You can also change the style of the element when a particular event triggers.
+        input.style.backgroundColor = 'green';
+        input.style.fontSize = "25px";
+    });
+    </script>
+</body>
+</html>

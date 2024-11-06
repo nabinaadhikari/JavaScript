@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">Changing HTML Using innerHTML Property.     
+    <p>Hi, I am nabina.</p>
+   <p>I stay in Nepal.</p>
+    </div>
+    <button onclick="changeHTML()">Click Me</button>
+    <script>
+        function changeHTML(){
+            let text= document.getElementById('demo');
+            let newtext=document.createElement('p'); //createElement() method to create a new <p> element. 
+               //After that, we added the HTML into that.
+            newtext.innerHTML = "Welcome to the Page";
+ //replaceWIth() method replaces the particular HTML element with a new element.
+            text.replaceWith(newtext); 
+//inner.HTML: to replace the HTML content of the element or add new HTML elements as children of the current element.
+            text.innerHTML='java, HTML, CSS';
+ //outerHTML element replaces the HTML of the element, including the tags.
+            text.outerHTML='<img src="https://www.tutorialspoint.com/static/images/logo.png?v3" alt="Logo">';     
+        }
+    </script>
+</body>
+</html>
