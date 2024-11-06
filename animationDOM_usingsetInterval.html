@@ -23,7 +23,7 @@
 <body>
 
     <div id="parent">
-    <div id="child">inner element</div>
+    <div id="child">Inner element</div>
     </div>
     <button onclick="startAnimation()">Start Animation</button>
     <script>
@@ -31,17 +31,16 @@
         let elem=document.getElementById('child');
         let pos = 0; //declare the position as 0
         let id = setInterval(animationFrame,5); // to invoke the animationFrame() function after every 5 milliseconds.
-        function animationFrame(){ 
+        function animationFrame() { 
             //to stop the annimation
-          if( pos == 600 ){
+          if ( pos == 300 ) {
             clearInterval(id);
           }
-            else{
+         else {
         pos++;
         elem.style.left = pos + "px";
-            }
-          
         }
+      }
     }
     //Note: if the position of the inner div becomes 350, we stop the animation using the clearInterval() method.
     // Otherwise, we change the left position of the inner div.
